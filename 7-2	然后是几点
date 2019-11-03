@@ -1,0 +1,47 @@
+#include<string>
+#include<iostream>
+using namespace std;
+
+int main() {
+
+	int time, minute1, hour1, minuteAmount, minute2, hour2, minuteSum, timeNow;
+
+	cin >> time >> minuteAmount;
+
+	minute1 = time % 100;
+	hour1 = time / 100;
+	minute2 = abs(minuteAmount) % 60;
+	hour2 = minuteAmount / 60;
+
+	if (minuteAmount < 0) {
+		minute2 = -minute2;
+	};
+
+	minuteSum = minute1 + minute2;
+
+	if (minuteSum < 60 && minuteSum > 0) {
+		cout << (hour1 + hour2) * 100 + minuteSum << endl;
+	}
+
+	else if (minuteSum <= 0) {
+		if (minuteSum > (-10)) {
+			cout << (hour1 + hour2 - 1) << "0" << (minuteSum + 60) << endl;
+		}
+		else {
+			cout << (hour1 + hour2 - 1) * 100 + (minuteSum + 60) << endl;
+		};
+	}
+
+	else if (minuteSum >= 60) {
+		if (minuteSum < 10) {
+			cout << (hour1 + hour2 + 1) << "0" << (minuteSum - 60) << endl;
+		}
+		else {
+			cout << (hour1 + hour2 + 1) * 100 + (minuteSum - 60) << endl;
+		};
+	};
+
+
+	return 0;
+
+};
