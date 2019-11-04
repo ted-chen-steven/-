@@ -1,0 +1,19 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+
+	int number, uint, decade, hundreds;
+
+	cin >> number;
+
+	hundreds = number / 100;
+	decade = static_cast<int>(number / 10) % 10;
+	uint = number % 10;
+
+	cout << hundreds + decade * 10 + uint * 100 << endl;
+
+	return 0;
+
+};
