@@ -1,0 +1,15 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+
+    int integer;
+
+    cin >> integer;
+    cout << hex;
+    cout << integer << endl;
+
+    return 0;
+
+};
