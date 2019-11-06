@@ -1,0 +1,30 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<iomanip>
+
+using namespace std;
+
+int main() {
+
+	string str(34, '-');
+	int count = 0;
+	vector<string> province = { "Anhui", "Beijing", "Chongqing", "Shanghai",
+	"Zhejiang" };
+	vector<double> area = { 139600.00, 16410.54, 82400.00, 6340.50, 101800.00 };
+	vector<double> population = { 6461.00, 1180.70, 3144.23, 1360.26, 4894.00 };
+
+	cout << str << endl;
+	cout << setw(12) << left << "Province" << setw(12) << left << "Area(km2)"
+		<< "Pop.(10K)" << endl;
+	cout << str << endl;
+	for (auto v : province) {
+		cout << setw(12) << left << v << setw(9) << right << setprecision(2)
+			<< fixed << area[count] << right << setw(10) << setprecision(2) << fixed << population[count] << endl;
+		count++;
+	};
+	cout << str << flush;
+
+	return 0;
+
+};
