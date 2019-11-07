@@ -11,7 +11,8 @@ int main() {
 	string str;
 
 	cin >> float1 >> int1 >> str >> float2;
-  cout << str << " " << int1 << " " << setprecision(2) << fixed << float1 << " " << float2 << endl;
+  	cout << str << " " << int1 << " " << setprecision(2) << fixed << float1 << " " 
+	<< float2 << endl;
 
 	return 0;
 
