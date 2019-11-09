@@ -1,0 +1,21 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main() {
+
+    int speed;
+
+    cin >> speed;
+
+    if (speed > 60){
+        cout << "Speed: " << speed << " - " << "Speeding" << endl;
+    }
+    else{
+        cout << "Speed: " << speed << " - " << "OK" << endl;
+    };
+
+    return 0;
+
+};
