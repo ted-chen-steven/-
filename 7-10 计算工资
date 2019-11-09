@@ -1,0 +1,36 @@
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+#define OLD_SALARY 50
+#define YOUNG_SALARY 30
+
+int main() {
+    
+    double years, hours;
+
+    cin >> years >> hours;
+
+    if (years >= 5){
+        if (hours <= 40){
+            cout << setprecision(2) << fixed << hours * OLD_SALARY << endl;
+        }
+        else{
+            cout << setprecision(2) << fixed 
+            << 40 * OLD_SALARY + (hours - 40) * 1.5 * OLD_SALARY << endl;
+        };
+    }
+    else{
+        if (hours <= 40){
+            cout << setprecision(2) << fixed << hours * YOUNG_SALARY << endl;
+        }
+        else{
+            cout << setprecision(2) << fixed 
+            << 40 * YOUNG_SALARY + (hours - 40) * 1.5 * YOUNG_SALARY << endl;
+        };
+    };
+
+    return 0;
+    
+};
