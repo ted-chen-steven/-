@@ -1,0 +1,17 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+
+	int ball1, ball2, ball3;
+
+	cin >> ball1 >> ball2 >> ball3;
+
+	(ball1 == ball2) ? 
+    (cout << "C" << endl) : 
+    ((ball1 == ball3) ? (cout << "B" << endl) : (cout << "A" << endl));
+
+	return 0;
+
+};
