@@ -1,0 +1,21 @@
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+int main() {
+    
+    double water_con;
+
+    cin >> water_con;
+
+    if (water_con > 15){
+        cout << setprecision(2) << fixed << 2.5 * water_con - 17.5 << endl;
+    }
+    else{
+        cout << setprecision(2) << fixed << 4 * water_con / 3 << endl;
+    };
+
+    return 0;
+    
+};
