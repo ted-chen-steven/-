@@ -1,0 +1,30 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main() {
+
+	string str;
+	int hour, minute;
+
+	cin >> str;
+	hour = stoi(str.substr(0, str.find(":")));
+	minute = stoi(str.substr(str.find(":") + 1));
+
+	if (hour == 0 && minute == 0) {
+		cout << "0:0 AM" << endl;
+	}
+	else if (hour == 12 && minute == 0) {
+		cout << "12:0 PM" << endl;
+	}
+	else if (hour > 0 && hour < 12) {
+		cout << hour << ":" << minute << " " << "AM" << endl;
+	}
+	else if (hour > 12) {
+		cout << hour - 12 << ":" << minute << " " << "PM" << endl;
+	};
+
+	return 0;
+
+};
