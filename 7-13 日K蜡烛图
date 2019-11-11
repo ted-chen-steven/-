@@ -1,0 +1,36 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main() {
+
+	double Open, High, Low, Close;
+	string str;
+
+	cin >> Open >> High >> Low >> Close;
+
+	if (Close > Open) {
+		str.append("R-Hollow");
+	}
+	else if (Close == Open) {
+		str.append("R-Cross");
+	}
+	else if (Close < Open) {
+		str.append("BW-Solid");
+	};
+	if (Low < Open && Low < Close) {
+		str.append(" with Lower Shadow");
+		if (High > Open && High > Close) {
+			str.append(" and Upper Shadow");
+		};
+	}
+	else if (High > Open && High > Close) {
+		str.append(" with Upper Shadow");
+	};
+
+	cout << str << flush;
+
+	return 0;
+
+};
