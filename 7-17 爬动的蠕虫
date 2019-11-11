@@ -1,0 +1,23 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+
+	int N, U, D;
+	int sum = 0, n = 0;
+
+	cin >> N >> U >> D;
+
+	while(sum < N) {
+		sum += U;
+		n++;
+		if (sum >= N) break;
+		sum -= D;
+		n++;
+	};
+	cout << n << endl;
+
+	return 0;
+
+};
