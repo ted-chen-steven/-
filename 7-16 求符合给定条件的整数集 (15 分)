@@ -1,0 +1,43 @@
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+
+int main() {
+
+	int n;
+	int count = 0;
+
+	cin >> n;
+	int m = n;
+	for (; m <= n + 3; m++) {
+		int sum = 0;
+		sum += m * 100;
+		int i = n;
+		for (; i <= n + 3; i++) {
+			int sum2 = sum;
+			if (i != m) {
+				sum2 += i * 10;
+			}
+			else continue;
+			int k = n;
+			for (; k <= n + 3; k++) {
+				if (k != m && k != i) {
+					int sum3 = sum2;
+					count++;
+					sum3 += k;
+					if (count % 6 == 0) {
+						cout << sum3;
+					}
+					else {
+						cout << sum3 << " ";
+					};
+					if (count % 6 == 0 && count != 24) cout << endl;
+				}
+				else continue;
+			};
+		};
+	};
+	return 0;
+
+};
